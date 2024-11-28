@@ -1,0 +1,10 @@
+bool checkRecord(char* s) {
+    int len = strlen(s);
+    int A = 0, L = 0;
+    for (int i = 0; i < len; i++){
+        if (s[i] == 'A')A++;
+        if (s[i] == 'L') if (s[i+1] == 'L') if (s[i+2] == 'L') L++;
+    }
+    if (A < 2 && L < 1) return true; 
+    else return false;
+}
